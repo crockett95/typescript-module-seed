@@ -1,0 +1,23 @@
+{
+  "name": "test1",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Stephen Crockett <crockett95@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/crockett95/typescript-module-seed",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
