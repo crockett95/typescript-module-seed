@@ -7,7 +7,7 @@ interface Window {
             [fileName: string]: string
         },
         start: () => any
-    }
+    };
 }
 
 var tests: string[] = [];

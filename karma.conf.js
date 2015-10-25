@@ -9,7 +9,7 @@ module.exports = function(config) {
     // testing framework to use (jasmine/mocha/qunit/...)
     frameworks: ['jasmine', 'requirejs'],
 
-    reporters: ['progress', 'coverage'],
+    reporters: ['spec', 'coverage'],
 
     preprocessors: {
       // source files, that you wanna generate coverage for
@@ -48,14 +48,20 @@ module.exports = function(config) {
     // - IE (only Windows)
     browsers: ['PhantomJS'],
 
+    captureConsole: false,
+
+    reportSlowerThan : 500,
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
     singleRun: false,
 
     coverageReporter: {
-      type : 'json',
-      dir : '.tmp/coverage'
+      reporters: [
+        { type: 'json', subdir: 'json' },
+        { type: 'html', subdir: 'html' }
+      ],
+      dir: '.tmp/coverage'
     }
   });
 };

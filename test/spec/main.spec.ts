@@ -14,5 +14,9 @@ describe('ClassName', () => {
     it('should instantiate a new class', () => {
       expect(myClass).toEqual(jasmine.any(ClassName));
     });
+
+    xit('should have a failing test');
+
+    xit('needs more tests');
   });
 });
