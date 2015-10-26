@@ -105,7 +105,7 @@ gulp.task('test', ['build:dev'], (done) => {
 gulp.task('watch:dev', (done) => {
   runKarma(true, done);
 
-  gulp.watch(config.paths.src.ts, ['compile:src', 'tslint:src']);
+  gulp.watch(config.paths.src.ts, ['compile:src', 'tslint:src', 'typedoc']);
   gulp.watch(config.paths.test.ts, ['compile:test', 'tslint:test']);
 });
 
@@ -123,7 +123,7 @@ gulp.task('serve:dev', (done) => {
     }
   });
 
-  gulp.watch(['.tmp/src/**/*.*', 'examples/**/*.*', 'test/runners/**/*.html'])
+  gulp.watch(['./.tmp/src/**/*.js', 'examples/**/*.*', 'test/runners/**/*.html'])
     .on('change', reload);
 });
 

@@ -12,5 +12,5 @@
         // Browser globals (root is window)
         root.returnExports = factory();
   }
-}(this, function () {
+})(this, function (jQuery) {
 // Start almond

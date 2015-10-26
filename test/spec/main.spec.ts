@@ -7,7 +7,7 @@ describe('ClassName', () => {
   var myClass: ClassName;
 
   beforeEach(() => {
-    myClass = new ClassName();
+    myClass = new ClassName('Hello');
   });
 
   describe('constructor', () => {
@@ -15,7 +15,10 @@ describe('ClassName', () => {
       expect(myClass).toEqual(jasmine.any(ClassName));
     });
 
-    xit('should have a failing test');
+    it('should have a name', () => {
+      expect(myClass.name).toBeDefined();
+      expect(myClass.name).toEqual('Hello');
+    });
 
     xit('needs more tests');
   });
